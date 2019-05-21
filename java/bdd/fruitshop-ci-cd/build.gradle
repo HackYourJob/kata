@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'workshop.bdd'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	testCompile 'io.cucumber:cucumber-java:4.2.5'
+	testCompile 'io.cucumber:cucumber-junit:4.2.5'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'junit:junit:4.12'
+	testImplementation 'org.mockito:mockito-core:1.10.19'
+	testImplementation 'info.cukes:cucumber-java:1.2.4'
+}
